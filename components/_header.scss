@@ -66,9 +66,7 @@
                         
                         a{
                             display: flex;
-                            &:nth-child(2){
-                                justify-content: end;
-                            }
+                            align-items: center;
                             &:hover{
                                 color: $clr-red;
                             }

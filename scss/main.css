@@ -122,9 +122,7 @@ body {
 }
 .header_container_wrapper .header_links .header_toggles ul li a {
   display: flex;
-}
-.header_container_wrapper .header_links .header_toggles ul li a:nth-child(2) {
-  justify-content: end;
+  align-items: center;
 }
 .header_container_wrapper .header_links .header_toggles ul li a:hover {
   color: #E51938;
