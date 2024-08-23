@@ -1,0 +1,163 @@
+.header{
+    &_container{  
+        @include centerAll;  
+
+        &_wrapper{
+            display: flex;
+            width: 100%;
+
+        .header_links{
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+            width: 100%;
+
+            &:nth-child(2){
+                flex-direction: row-reverse;
+                gap: 2rem;
+            }
+            
+            .header_span{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-right: 2rem;
+                cursor: pointer;
+                span{
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background-color: black;
+                }
+                &.open{
+                    span{
+                        &:first-child{
+                            transform: translate(0, 6px) rotate(135deg);
+                            width: 20px;
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                        }
+                        &:last-child{
+                            transform: translate(0, -10px) rotate(-135deg);
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+
+            .header_toggles{
+                position: absolute;
+                top: 8rem;
+                right: 0;
+                width: 100%;
+                transition: max-height 0.3s ease-out;
+                max-height: 0;
+                overflow: hidden;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    li{
+                        gap: 2rem;
+                        border-bottom: 1px solid rgb(162, 158, 158);
+                        
+                        a{
+                            display: flex;
+                            &:nth-child(2){
+                                justify-content: end;
+                            }
+                            &:hover{
+                                color: $clr-red;
+                            }
+                        }
+                    }  
+                }
+                &.open{
+                    display: block;
+                    max-height: 350px;
+                }
+            }
+
+            .header_button{
+                display: flex;
+                background-color: rgba(255, 111, 111, 0.5);
+                color: $clr-red;
+                gap: 1rem;
+                margin-left: 2rem;
+                padding: 1rem;
+                border-radius: 5px;
+                transition: 0.6s ease;
+                
+                svg{
+                    display: none;
+                }
+
+                &:hover{
+                    background-color: $clr-red;
+                    color: $clr-light;
+                    transition: 0.6s ease;
+                }
+            }
+        }
+        }
+    }
+
+    @include mediaQuery($break-md) {
+        &_container {
+            &_wrapper {
+                display: flex;
+                width: 100%;
+
+                .header_links {
+                    justify-content: end;
+                    flex-direction: row;
+                    width: 100%;
+
+
+                    &:nth-child(2){
+                        flex-direction: row;
+                        margin-right: 2rem;
+                    }
+
+                    .header_span {
+                        display: none;
+
+                        &.open {
+                            display: none;
+                        }
+                    }
+
+                    .header_toggles {
+                        position: static;
+                        max-height: none;
+
+                        ul {
+                            flex-direction: row;
+                            gap: 4rem;
+
+                            li{
+                                border: none;
+                            }
+                        }
+                    }
+
+                    .header_button{
+                        width: 15rem;
+                        svg{
+                            display: unset;
+                        }
+
+                        &:hover{
+                            svg{
+                                color: $clr-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
