@@ -1,0 +1,126 @@
+$clr-red: #E51938;
+$clr-dark: #2b2b2b;
+$clr-light: #ffffff;
+
+.footer{
+
+    &_container{
+        background-color: #F9F5F2;
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+        .branding{
+            margin-left: 1rem;
+            p{
+                font-size: 1rem;
+                font-weight: 100;
+            }
+    
+            .search-container {
+                form {
+                    gap: 2rem; 
+                }
+
+                input[type="text"] {
+                    padding: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+            }
+            
+            button {
+                padding: 13px 20px; 
+                border: none;
+                background-color: $clr-red;
+                color: white;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+             button:hover {
+             background-color: $clr-dark;
+             }
+            }
+        }   
+    }
+    
+    &_social{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        i {
+            width: 1.5rem;
+            color: #666666;
+        }
+
+        i:hover{
+            color: $clr-red;
+        }
+    }
+
+    &_category{
+       
+        margin-top: 2rem;
+        margin-left: 1rem;
+         
+        &_nav, &_contacts{
+            ul{
+                list-style-type: none;
+                margin-left: -3rem;
+            
+              a{
+                text-decoration: none;
+                color: #666666;     
+                
+              }
+            }
+
+            li {
+                padding: 0.5rem;
+                &:hover {
+                    a {
+                        color: $clr-red; 
+                        transition: 1s ease;
+                    }
+                }
+            }
+        }
+        
+    }
+       
+    &_copyright{
+        p{
+            padding-top: 1rem;
+            margin: 0 auto;
+            text-align: center;
+
+            a{
+                text-decoration: none;
+                &:hover{
+                 color: red; 
+                            transition: 1s ease;
+                }
+            }
+        }
+
+    }
+
+    @include mediaQuery($break-md){
+        &_social{
+           i{
+            display: flex;
+            flex-direction: column;
+        
+           }
+                
+        }
+        &_category{
+            &_nav{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+  
+      
+}
+
+    
+
+
