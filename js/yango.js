@@ -5,3 +5,5 @@ navSpan.addEventListener("click", () => {
     navSpan.classList.toggle("open");
     navToggles.classList.toggle("open");
  });
+
+ 
