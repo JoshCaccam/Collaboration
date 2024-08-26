@@ -7,7 +7,12 @@
         &_wrapper{
             display: flex;
             width: 100%;
-
+        
+        .header_logo{
+            img{
+                width: 120px;
+            }
+        }
         .header_links{
             display: flex;
             align-items: center;
