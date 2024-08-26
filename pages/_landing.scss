@@ -1,0 +1,188 @@
+.about{
+    &_container{
+        &_wrapper{
+            padding: 15rem;
+            .about_text{
+                font-family: 'Nunito Sans', sans-serif;
+                text-align: center;
+                color: $clr-gray;
+                h1{
+                    font-size: 200%;
+                    font-weight: 900;
+                    color: $clr-black;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.us{
+    padding: 5rem;
+    &_container{
+        &_wrapper{
+            text-align: center;
+            .us_branding{
+                img{
+                    width: 100%;
+                }
+            }
+            .us_text{
+                font-family: $ff-yango;
+                .title{
+                    color: $clr-red;
+                    margin-bottom: 2rem;
+                }
+                h2{
+                    font-size: 200%;
+                    font-weight: 900;
+                    color: $clr-black;
+                    margin-bottom: 2rem;
+                }
+                .pg{
+                    font-family: $ff-yango;
+                    margin-bottom: 2rem;
+                    color: $clr-gray;
+                }
+            }
+            .us_button{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                &_container{
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    width: 150px;
+                    color: $clr-red;
+                    background-color: rgba($clr-red, 0.15);
+                    border-radius: 5px;
+                    font-family: $ff-yango;
+                    transition: 0.3s ease;
+                    &:hover{
+                        background-color: rgba($clr-red, 1);
+                        color: $clr-light;
+                        cursor: pointer;
+                        transition: 0.3s ease;
+                    }
+                }
+            }
+
+            @include mediaQuery($break-md){
+                display: flex;
+                text-align: start;
+                .us_branding{
+                    width: 1500px;
+                }
+                .us_text{
+                    margin-right: 20rem;
+                    margin-left: 5rem;
+                }
+                .us_button{
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
+
+.mission{
+    &_container{
+        background-color: #f9f9f9;
+        padding: 5rem;
+        &_wrapper{
+            text-align: center;
+            .mission_text{
+                .title{
+                    color: $clr-red;
+                }
+                h2{
+                    font-size: 200%;
+                    font-weight: 900;
+                    color: $clr-black;
+                    margin-bottom: 2rem;
+                }
+                .pg{
+                    font-family: $ff-yango;
+                    margin-bottom: 2rem;
+                    color: $clr-gray;
+                }
+                .mission_button{
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    &_container{
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        width: 150px;
+                        color: $clr-red;
+                        background-color: rgba($clr-red, 0.15);
+                        border-radius: 5px;
+                        font-family: $ff-yango;
+                        transition: 0.3s ease;
+                        &:hover{
+                            background-color: rgba($clr-red, 1);
+                            color: $clr-light;
+                            cursor: pointer;
+                            transition: 0.3s ease;
+                        }
+                    }
+                }
+            }
+            .mission_branding{
+                margin-top: 2rem;
+                img{
+                    width: 100%;
+                    max-width: 450px;
+                }
+                .mission_carry{
+                    img{
+                        width: 350px;
+                    }
+                }
+            }
+            @include mediaQuery($break-md){
+                display: flex;
+                text-align: start;
+                padding: 5rem;
+                .mission_text{
+                    margin-top: 15rem;
+                    margin-right: 25rem;
+                    margin-left: 10rem;
+                    width: 100%;
+                    .mission_button{
+                        margin-right: 45rem;
+                    }
+                }
+                .mission_branding{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    margin-right: 200px;
+                    .mission_man{
+                        position: relative;
+                        img{
+                            width: 750px;
+                        }
+                    }
+                    .mission_carry{
+                        position: absolute;
+                        img{
+                            margin-top: 22rem;
+                            margin-right: 35rem;
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+        @include mediaQuery($break-md){
+            padding: 0;
+        }
+    }
+}
