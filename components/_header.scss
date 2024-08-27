@@ -12,6 +12,7 @@
         
         .header_logo{
             margin-right: 17rem;
+            
             img{
                 width: 120px;
             }
@@ -21,6 +22,7 @@
             align-items: center;
             flex-direction: column-reverse;
             width: 100%;
+
 
             &:nth-child(2){
                 flex-direction: row-reverse;
@@ -58,7 +60,7 @@
 
             .header_toggles{
                 position: absolute;
-                top: 8rem;
+                top:4.5rem;
                 right: 0;
                 width: 100%;
                 transition: max-height 0.3s ease-out;
@@ -74,14 +76,28 @@
                     li{
                         gap: 2rem;
                         border-bottom: 1px solid rgb(162, 158, 158);
-                        a{
-                            display: flex;
-                            align-items: center;
-                            width: 100%;
 
-                            .toggle_link {
-                                flex: 1;
+                        .js-click{
+                            &.open{
+                                &::after{
+                                    content: "-";
+                                }
                             }
+                        }
+                        &:not(:nth-child(3), :last-child) {
+                            a {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                justify-content: space-between;
+                                padding-right: 2rem;
+                                
+                                &::after{
+                                    content: "+";
+                                }
+                            }
+                        }
+                        a{
 
                             .toggles_svg {
                                 span{
@@ -111,7 +127,7 @@
                 padding: 1rem;
                 border-radius: 5px;
                 transition: 0.6s ease;
-                
+                white-space: nowrap;
                 svg{
                     display: none;
                 }
@@ -133,7 +149,7 @@
                 width: 100%;
 
                 .header_logo{
-                    margin-right: 61rem;
+                    // margin-right: 61rem;
                 }
                 .header_links {
                     justify-content: end;
