@@ -1,12 +1,38 @@
 .header{
+<<<<<<< HEAD
     &_container{
         display: flex;
         justify-content: space-between;
 
+=======
+    top: 0;
+    z-index: 1000;
+    background: $clr-blue;
+    &_container{  
+        position: fixed;
+        background-color: $clr-light;
+        z-index: 1000;
+        &_wrapper{
+            display: flex;
+            width: 100%;
+        
+        .header_logo{
+            margin-right: 17rem;
+            
+            img{
+                width: 120px;
+            }
+        }
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
         .header_links{
             display: flex;
             align-items: center;
             flex-direction: column-reverse;
+<<<<<<< HEAD
+=======
+            width: 100%;
+
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
 
             &:nth-child(2){
                 flex-direction: row-reverse;
@@ -28,6 +54,7 @@
                 &.open{
                     span{
                         &:first-child{
+<<<<<<< HEAD
                             transform: translate(0, 10px) rotate(255deg);
                             transition: 0.5s ease;
                         }
@@ -37,6 +64,17 @@
                         &:last-child{
                             transform: translate(0, -6px) rotate(-255deg);
                             transition: 0.5s ease;
+=======
+                            transform: translate(0, 6px) rotate(135deg);
+                            width: 20px;
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                        }
+                        &:last-child{
+                            transform: translate(0, -10px) rotate(-135deg);
+                            width: 20px;
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
                         }
                     }
                 }
@@ -44,18 +82,69 @@
 
             .header_toggles{
                 position: absolute;
+<<<<<<< HEAD
                 transition: max-height 0.3s ease-out;
                 max-height: 0;
                 overflow: hidden;
+=======
+                top:4.5rem;
+                right: 0;
+                width: 100%;
+                transition: max-height 0.3s ease-out;
+                max-height: 0;
+                overflow: hidden;
+
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
                 ul{
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
+<<<<<<< HEAD
 
                     li{
                         &:hover{
                             background-color: $clr-red;
                             text-decoration: underline;
+=======
+                    background-color: $clr-light;
+
+                    li{
+                        gap: 2rem;
+                        border-bottom: 1px solid rgb(162, 158, 158);
+
+                        .js-click{
+                            &.open{
+                                &::after{
+                                    content: "-";
+                                }
+                            }
+                        }
+                        &:not(:nth-child(3), :last-child) {
+                            a {
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                justify-content: space-between;
+                                padding-right: 2rem;
+                                
+                                &::after{
+                                    content: "+";
+                                }
+                            }
+                        }
+                        a{
+
+                            .toggles_svg {
+                                span{
+                                    font-size: 20px;
+                                    margin-right: 2rem;
+                                }
+                            }
+
+                            &:hover{
+                                color: $clr-red;
+                            }
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
                         }
                     }  
                 }
@@ -66,6 +155,7 @@
             }
 
             .header_button{
+<<<<<<< HEAD
                 margin-left: 2rem;
                 transition: 0.3s at ease;
                 padding: 1rem;
@@ -74,8 +164,93 @@
                 &:hover{
                     background-color: $clr-red;
                     transition: 0.3s at ease;
+=======
+                display: flex;
+                background-color: rgba(255, 111, 111, 0.5);
+                color: $clr-red;
+                gap: 1rem;
+                margin-left: 2rem;
+                padding: 1rem;
+                border-radius: 5px;
+                transition: 0.6s ease;
+                white-space: nowrap;
+                svg{
+                    display: none;
+                }
+
+                &:hover{
+                    background-color: $clr-red;
+                    color: $clr-light;
+                    transition: 0.6s ease;
+                }
+            }
+        }
+        }
+    }
+
+    @include mediaQuery($break-md) {
+        &_container {
+            &_wrapper {
+                display: flex;
+                width: 100%;
+
+               
+                .header_links {
+                    justify-content: end;
+                    flex-direction: row;
+                    width: 100%;
+
+
+                    &:nth-child(2){
+                        flex-direction: row;
+                        margin-right: 2rem;
+                    }
+
+                    .header_span {
+                        display: none;
+
+                        &.open {
+                            display: none;
+                        }
+                    }
+
+                    .header_toggles {
+                        position: static;
+                        max-height: none;
+
+                        ul {
+                            flex-direction: row;
+                            gap: 4rem;
+
+                            li{
+                                border: none;
+                            }
+                        }
+                        
+                        .toggle_icon {
+                            content: 'v';
+                        }
+                    }
+
+                    .header_button{
+                        width: 15rem;
+                        svg{
+                            display: unset;
+                        }
+
+                        &:hover{
+                            svg{
+                                color: $clr-light;
+                            }
+                        }
+                    }
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
                 }
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4bef4c16c59bb37b24cc2eeb60c0addbf1074780
