@@ -49,12 +49,209 @@ body {
   margin-left: 9rem;
 }
 .btn.bg--primary {
-  background: #E51938;
+  background: #fff021;
   color: #ffffff;
 }
 .btn:hover {
   scale: 1.1;
   transition: 0.5 ease;
   background-color: #ffffff;
+  color: #fff021;
+}
+
+.team {
+  background-color: #fff021;
+  margin: 0 auto;
+  text-align: center;
+}
+.team_title {
+  padding-left: 0;
+  text-align: center;
+}
+.team_text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.team h1 {
+  padding-top: 5rem;
+  margin: 0 auto;
+}
+.team ul {
+  display: flex;
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-right: 0rem;
+  padding-left: 0;
+}
+.team .Home_teamsilder {
   color: #E51938;
+}
+
+.Expert {
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+}
+.Expert_title {
+  color: #E51938;
+  padding-top: 5rem;
+  font-size: 13px;
+}
+.Expert_text {
+  padding-top: 0rem;
+  font-size: 22px;
+}
+.Expert_sentence {
+  line-height: 1.8;
+  font-size: 17px;
+  gap: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.Members {
+  padding-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.Members_cards1 {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  background-color: #ffffff;
+  height: 450px;
+}
+.Members_img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.Members img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Members_Name {
+  text-align: center;
+}
+.Members_Name h2 {
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+.Members_Name h5 {
+  color: #E51938;
+  padding-top: 1rem;
+}
+.Members_links {
+  background-color: #E51938;
+  height: 50px;
+  transition: var(--transition);
+}
+.Members ul {
+  padding-top: 1rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  color: white;
+}
+.Members li {
+  transition: 0.3s ease;
+}
+.Members li:hover {
+  background-color: #ffffff;
+  width: 5%;
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+.Members_dots {
+  display: flex;
+  gap: 1rem;
+  padding-top: 3rem;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
+.Members_dots span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  border-radius: 5rem;
+  background-color: black;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+}
+.header_container .header_links {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.header_container .header_links:nth-child(2) {
+  flex-direction: row-reverse;
+  gap: 2rem;
+}
+.header_container .header_links .header_span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.header_container .header_links .header_span span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+.header_container .header_links .header_span.open span:first-child {
+  transform: translate(0, 10px) rotate(255deg);
+  transition: 0.5s ease;
+}
+.header_container .header_links .header_span.open span:nth-child(2) {
+  opacity: 0;
+}
+.header_container .header_links .header_span.open span:last-child {
+  transform: translate(0, -6px) rotate(-255deg);
+  transition: 0.5s ease;
+}
+.header_container .header_links .header_toggles {
+  position: absolute;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+.header_container .header_links .header_toggles ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.header_container .header_links .header_toggles ul li:hover {
+  background-color: #E51938;
+  text-decoration: underline;
+}
+.header_container .header_links .header_toggles.open {
+  display: block;
+  max-height: 350px;
+}
+.header_container .header_links .header_button {
+  margin-left: 2rem;
+  transition: 0.3s at ease;
+  padding: 1rem;
+  background-color: #E51938;
+}
+.header_container .header_links .header_button:hover {
+  background-color: #E51938;
+  transition: 0.3s at ease;
 }/*# sourceMappingURL=main.css.map */

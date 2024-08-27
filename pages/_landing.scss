@@ -1,0 +1,151 @@
+// mobile view
+.team{
+    background-color: $clr-primary;
+    margin: 0 auto;
+    text-align: center;
+    &_title{
+        padding-left: 0;
+        text-align: center;
+    }
+
+
+    &_text{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    h1{
+        padding-top: 5rem;
+        margin: 0 auto;
+    }
+    ul{
+        display: flex;
+        gap: 3rem;
+        padding-top: 5rem;
+        padding-right: 0rem;
+        padding-left: 0;
+    }
+    .Home_teamsilder{
+        color: $clr-red;
+    }
+}
+
+.Expert{
+    background-color: $clr-light;
+    margin: 0 auto;
+    text-align: center;
+
+    &_title{
+        color: $clr-red;
+        padding-top: 5rem;
+        font-size: 13px;
+    }
+    &_text{
+        padding-top: 0rem;
+        font-size: 22px;
+    }
+    &_sentence{
+        line-height: 1.8;
+        font-size: 17px;
+        gap: 2rem;
+        text-align: center;
+        padding-top: 1rem;
+
+    }
+}
+
+.Members{
+    padding-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    
+   
+    &_cards1{
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        overflow: hidden;
+        margin: 20px;
+        background-color: $clr-light;
+        height:450px;
+    //     display: none;
+
+    // &_cards1:first-child{
+    //     display: block;
+    // }
+    }
+
+    &_img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   &_Name{
+    text-align: center;
+    h2{
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+    h5{
+        color: $clr-red;
+        padding-top: 1rem;
+    }
+   }
+   &_links{
+    background-color: $clr-red;
+    height: 50px;
+    transition: var(--transition);
+    
+   }
+   ul{
+    padding-top: 1rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    color: white;
+   }
+   li{ 
+    transition: 0.3s ease;
+    &:hover{
+        background-color: $clr-light;
+        width: 5%;
+        height: 20rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+     
+        // padding-top:0.5rem;
+        // padding-bottom: 0.5rem;   
+    }
+   }
+   &_dots{
+    display: flex;
+    gap: 1rem;
+    padding-top: 3rem;
+    justify-content: center;
+    padding-bottom: 10rem;
+
+    span{
+        display: block;
+        width: 30px;
+        height: 5px;
+        border-radius: 5rem;
+        background-color: black;
+
+    
+    }
+   }
+
+
+}
+
