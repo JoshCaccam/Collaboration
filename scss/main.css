@@ -364,6 +364,7 @@ main {
 .creator_container_wrapper {
   background: rgba(249, 245, 242, 0.45);
   padding: 3.5rem;
+  margin-bottom: 2rem;
 }
 .creator_container_wrapper .creator_branding img {
   width: 400px;
@@ -459,10 +460,14 @@ main {
   background: linear-gradient(to right bottom, #fffefe, #fffbf6, #fcfbee, #eafeef, #d7fffe);
   margin: 0 auto;
   text-align: center;
+  height: 35rem;
 }
 .team_title {
   padding-left: 0;
   text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  padding-top: 80px;
+  font-size: 35px;
 }
 .team_text {
   display: flex;
@@ -627,12 +632,12 @@ main {
 }
 @media screen and (min-width: 760px) {
   .banner_container {
-    padding: 5.5rem;
+    padding: 15rem;
     margin-bottom: 6rem;
   }
 }
 .banner_text {
-  margin-right: 5rem;
+  margin-right: 1rem;
   text-align: center;
   padding: 0.6rem;
 }
@@ -658,7 +663,7 @@ main {
 @media (min-width: 760px) {
   .banner_text ul {
     margin-right: 8rem;
-    margin-top: -1.7rem;
+    margin-top: 1.7rem;
   }
 }
 .banner_text ul li {

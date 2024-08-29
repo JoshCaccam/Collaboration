@@ -99,24 +99,3 @@ function removeActiveContent() {
     });
 });
 
-function updateDotLayout() {
-const container = document.querySelector('.Members_dots');
-const dots = document.querySelectorAll('.owl-dot');
-const viewportWidth = window.innerWidth;
-
-if (viewportWidth < 1024) {
-  container.style.flexDirection = 'row';
-  dots.forEach(dot => {
-    dot.style.flex = '0 0 calc(50% / 8)'; 
-  });
-} else {
-  container.style.flexDirection = 'row';
-  dots.forEach(dot => {
-    dot.style.flex = '0 0 calc(10% / 4)'; 
-  });
-}
-}
-
-updateDotLayout();
-
-window.addEventListener('resize', updateDotLayout);
