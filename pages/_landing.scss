@@ -1,7 +1,12 @@
+main{
+    max-width: 200rem;
+    margin: auto;
+}
 //Caccam
 .about{
     &_container{
         &_wrapper{
+            background: $clr-blue;
             padding: 15rem;
             .about_text{
                 font-family: 'Nunito Sans', sans-serif;
@@ -188,10 +193,249 @@
     }
 }
 
+.tau {
+    &_container {
+        .tau_text {
+            margin-top: 7rem;
+            text-align: center;
+            font-family: $ff-yango;
+            h2{
+                font-size: 200%;
+                font-weight: 900;
+            }
+            p {
+                color: $clr-red;
+            }
+        }
+        &_wrapper {
+            margin-bottom: 2rem;
+
+            .tau_team {
+                margin: 2rem;
+                .tau_team_container {
+                    background-color: rgba(#F9F5F2,0.45);
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.3s ease;
+                    
+                    .tau_branding {
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            width: 250px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .tau_name {
+                        text-align: center;
+                        margin-top: 2rem;
+                        p {
+                            margin-top: 0.3rem;
+                            margin-bottom: 2rem;
+                            color: $clr-red;
+                        }
+                    }
+
+                    .tau_icon {
+                        .tau_icon_container {
+                            display: flex;
+                            justify-content: center;
+                            gap: 1rem;
+                            background-color: $clr-red;
+
+                            i {
+                                color: $clr-light;
+                                background-color: $clr-red;
+                                padding: 1rem;
+                                transition: 0.3s ease;
+
+                                &:hover {
+                                    background-color: $clr-light;
+                                    color: $clr-dark;
+                                    transition: 0.3s ease;
+                                }
+                            }
+                        }
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 50%;
+                        background-color: transparent;
+                        border-radius: 0 0 50% 50%;
+                        z-index: 0;
+                        transform: translateY(-10%);
+                        transition: background-color 0.3s ease, transform 0.3s ease;
+                    }
+
+                    &:hover {
+                        .tau_icon{
+                            top: 90%;
+                        }
+                        &::before{
+                            background-color: $clr-red;
+                            transform: translateY(0%);
+                        }
+                    }
+
+                    .tau_branding,
+                    .tau_name {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            @include mediaQuery($break-md){
+                display: flex;
+                justify-content: center;
+                .tau_team_container{
+                    padding: 2rem;
+                }
+                .tau_icon {
+                    position: absolute;
+                    top: 100%;  
+                    left: 0;
+                    right: 0;  
+                    transition: 0.3s ease;  
+
+                    .tau_icon_container {
+                        display: flex;
+                        justify-content: center;                   
+                        background-color: $clr-red;
+
+                        i {
+                            color: $clr-light;
+                            background-color: $clr-red;                          
+                            transition: 0.3s ease;
+
+                            &:hover {
+                                background-color: $clr-light;
+                                color: $clr-dark;
+                                transition: 0.3s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.creator{
+    &_container{
+        &_wrapper{
+            background: rgba(#F9F5F2,0.45);
+            padding: 3.5rem;
+            .creator_branding{              
+                img{
+                    width: 400px;
+                }
+            }
+            .creator_comment{
+                display: flex;
+                flex-direction: column-reverse;
+                .creator_text{
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                    font-family: $ff-yango;
+                    font-size: 16px;
+                    font-weight: 540;
+                    font-style: italic;
+                    text-align: center;
+                }
+            }
+            .creator_pfp{
+                .creator_title{
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    img{
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+                    .title_text{
+                        h4{
+                            color: $clr-red;
+                            margin-bottom: 0.5rem;
+                        }
+                        p{
+                            color: $clr-gray;
+                        }
+                    }
+                }
+            }
+            .creator_span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+                span{
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    margin: 0 5px;
+                    border-radius: 50%;
+                    background-color: $clr-gray;
+                    transition: 0.3s ease;
+                    cursor: pointer;
+                    &:hover, &.click{
+                        background-color: $clr-red; 
+                    }
+                    &.active{
+                        background-color: $clr-red;
+                    }
+                }
+            }
+            .creator_slide{
+                display: none;
+                &.active{
+                    display: unset;
+                }
+            }
+
+            @include mediaQuery($break-md){
+                display: flex;
+                .creator_branding{
+                    img{
+                        width: 600px;
+                    }
+                }
+                .creator_comment{
+                    margin-left: 2rem;
+                    position: relative;
+                    .creator_text{
+                        margin-right: 5rem;
+                        line-height: 1.4;
+                        font-size: 26px;
+                        font-weight: 600;
+                        font-style: italic;
+                        text-align: start;
+                    }
+                }
+                .creator_pfp{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .creator_span{
+                    position: absolute;
+                    right: 5rem;
+                    bottom: 5rem;
+                }
+            }
+        }
+    }
+}
 //Briones
 // mobile view
 .team{
-    background-color: $clr-primary;
+    background: linear-gradient(to right bottom, #fffefe, #fffbf6, #fcfbee, #eafeef, #d7fffe);
     margin: 0 auto;
     text-align: center;
     &_title{
@@ -381,14 +625,13 @@
 
 //Cuenca
 
-$break-md: 760px;
 .banner{
     &_container {
       background: linear-gradient(to right bottom, #fffefe, #fffbf6, #fcfbee, #eafeef, #d7fffe);
         font-size: 0.8rem;
         width: 100%;
         padding: 3rem;
-        @media (min-width: $break-md) {
+        @include mediaQuery($break-md) {
             padding: 5.5rem; 
             margin-bottom: 6rem;
             
@@ -453,9 +696,6 @@ $break-md: 760px;
         }
     }
 }
-  
-   
-
 
 .blog{
     margin-top: 3.5rem;
@@ -515,7 +755,6 @@ $break-md: 760px;
         .cblog_post_img img:hover + .cblog_post_content p + .btn-content {
             display: block;
             opacity: 1;
-    
           }
       
           .cblog_post_img img:hover + .cblog_post_content p {
