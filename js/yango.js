@@ -5,15 +5,28 @@ const navToggles = document.querySelector(".header_toggles");
 navSpan.addEventListener("click", () => {
     navSpan.classList.toggle("open");
     navToggles.classList.toggle("open");
+    if(navToggles.classList.contains("open")){
+        navToggles.style.maxHeight = navToggles.scrollHeight + "px";
+    } else {
+        navToggles.style.maxHeight = null;
+    }
  });
 
  const down = document.querySelectorAll(".js-click");
 
 down.forEach(toggle =>{
     toggle.addEventListener("click", () =>{
-        toggle.classList.toggle("open");
+        if (toggle.classList.contains("open")&&window.innerWidth<760){
+            toggle.classList.remove("open");
+            toggle.nextElementSibling.style.maxHeight = null;
+        }else if(!toggle.classList.contains("open")&&window.innerWidth<760){
+            toggle.nextElementSibling.style.maxHeight = toggle.nextElementSibling.scrollHeight + "px";
+            toggle.classList.add("open");
+        }
+
     })
 })
+
  //Slider
  document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
@@ -22,7 +35,6 @@ down.forEach(toggle =>{
     const totalSlides = slides.length;
 
     function updateSlider(index) {
-        // Ensure the index wraps around the slides
         if (index >= totalSlides) {
             currentIndex = 0;
         } else if (index < 0) {
@@ -31,12 +43,10 @@ down.forEach(toggle =>{
             currentIndex = index;
         }
 
-        // Update the slides
         slides.forEach((slide, i) => {
             slide.style.display = (i === currentIndex) ? 'block' : 'none';
         });
 
-        // Update the dots
         dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === currentIndex);
         });
@@ -50,14 +60,11 @@ down.forEach(toggle =>{
         updateSlider(currentIndex - 1);
     }
 
-    // Initial setup
     updateSlider(currentIndex);
 
-    // Event listeners for buttons
     document.querySelector('.owl-dot').addEventListener('click', prevSlide);
     document.querySelector('.owl-dot').addEventListener('click', nextSlide);
 
-    // Event listeners for dots
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
             updateSlider(i);
@@ -71,22 +78,18 @@ const dots = document.querySelectorAll('.owl-dot');
 const viewportWidth = window.innerWidth;
 
 if (viewportWidth < 1024) {
-  // Mobile view: 8 dots per row
   container.style.flexDirection = 'row';
   dots.forEach(dot => {
-    dot.style.flex = '0 0 calc(50% / 8)'; // 8 dots per row
+    dot.style.flex = '0 0 calc(50% / 8)'; 
   });
 } else {
-  // Desktop view: 4 dots per row
   container.style.flexDirection = 'row';
   dots.forEach(dot => {
-    dot.style.flex = '0 0 calc(10% / 4)'; // 4 dots per row
+    dot.style.flex = '0 0 calc(10% / 4)'; 
   });
 }
 }
 
-// Initial layout adjustment
 updateDotLayout();
 
-// Adjust layout on window resize
 window.addEventListener('resize', updateDotLayout);

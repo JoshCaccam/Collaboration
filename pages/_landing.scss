@@ -1,3 +1,122 @@
+//Asuncion
+.home{
+    &_container{
+        &_wrapper{
+            padding: 8rem;
+            .home_text{
+                text-align: center;
+                font-family: $ff-yango;
+                h1{
+                    margin-bottom: 1.5rem;
+                }
+                .home_button{
+                    button{
+                        padding: 1rem;
+                        border-radius: 10%;
+                        border: none;
+                        cursor: pointer;
+                        margin-bottom: 5rem;
+                        margin-top: 1.5rem;
+                        &:first-child{
+                            background-color: $clr-red;
+                            &:hover{
+                                background-color: $clr-white;
+                                color: $clr-red;
+                            }
+                        }
+                        &:last-child{
+                            background-color: $clr-light;
+                            &:hover{
+                                background-color: $clr-black;
+                                color: $clr-light;
+                            }
+                        }
+                    }
+                }
+            }
+            .home_image{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 350px;
+                    
+                }
+            }
+
+            @include mediaQuery($break-md){
+            display: flex;
+            .home_text{
+                margin-top: 15rem;
+                text-align: start;
+                h1{
+                    font-size: 50px;
+                    font-weight: 900;
+                    
+                }
+            }
+            .home_image{
+                img{
+                    width:650px  ;
+                }
+            }
+        }
+    }
+
+    }
+}
+
+
+.features{
+    &_container{
+        &_wrapper{
+            .features_img{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 450px;
+                }
+            }
+            .features_text{
+                text-align: center;
+                padding-top: 5rem;
+                p{
+                    color: $clr-red;
+                }
+                h2{//be right back
+                    width: 370px;
+                    margin: 0 auto;           
+                    text-align: center;
+                }
+            }
+            .features_card{
+                text-align: center;
+                padding: 5rem;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                margin-bottom: 5rem;
+
+                &:hover{
+                    background-color: $clr-red;
+                    color: $clr-light;
+                    p{
+                        color: $clr-light;
+                    }
+                    
+                }
+                p{
+                    padding-top: 2.5rem;
+                    color: $clr-gray;
+                }
+           
+            }
+        }
+    }
+}
+
+
+
+
+
 //Caccam
 .about{
     &_container{
@@ -661,3 +780,6 @@ $break-md: 760px;
             }
         }
      }
+
+
+     //Asuncion
