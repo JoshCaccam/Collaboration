@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 ul {
@@ -63,6 +64,98 @@ body {
 main {
   max-width: 200rem;
   margin: auto;
+.home_container_wrapper {
+  padding: 8rem;
+}
+.home_container_wrapper .home_text {
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+.home_container_wrapper .home_text h1 {
+  margin-bottom: 1.5rem;
+}
+.home_container_wrapper .home_text .home_button button {
+  padding: 1rem;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+}
+.home_container_wrapper .home_text .home_button button:first-child {
+  background-color: #E51938;
+}
+.home_container_wrapper .home_text .home_button button:first-child:hover {
+  background-color: #F9F5F2;
+  color: #E51938;
+}
+.home_container_wrapper .home_text .home_button button:last-child {
+  background-color: #ffffff;
+}
+.home_container_wrapper .home_text .home_button button:last-child:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.home_container_wrapper .home_image {
+  display: flex;
+  justify-content: center;
+}
+.home_container_wrapper .home_image img {
+  width: 350px;
+}
+@media screen and (min-width: 760px) {
+  .home_container_wrapper {
+    display: flex;
+  }
+  .home_container_wrapper .home_text {
+    margin-top: 15rem;
+    text-align: start;
+  }
+  .home_container_wrapper .home_text h1 {
+    font-size: 50px;
+    font-weight: 900;
+  }
+  .home_container_wrapper .home_image img {
+    width: 650px;
+  }
+}
+
+.features_container_wrapper .features_img {
+  display: flex;
+  justify-content: center;
+}
+.features_container_wrapper .features_img img {
+  width: 450px;
+}
+.features_container_wrapper .features_text {
+  text-align: center;
+  padding-top: 5rem;
+}
+.features_container_wrapper .features_text p {
+  color: #E51938;
+}
+.features_container_wrapper .features_text h2 {
+  width: 370px;
+  margin: 0 auto;
+  text-align: center;
+}
+.features_container_wrapper .features_card {
+  text-align: center;
+  padding: 5rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+}
+.features_container_wrapper .features_card:hover {
+  background-color: #E51938;
+  color: #ffffff;
+}
+.features_container_wrapper .features_card:hover p {
+  color: #ffffff;
+}
+.features_container_wrapper .features_card p {
+  padding-top: 2.5rem;
+  color: #666666;
 }
 
 .about_container_wrapper {
@@ -1245,3 +1338,4 @@ main {
     color: #ffffff;
   }
 }/*# sourceMappingURL=main.css.map */
+}
