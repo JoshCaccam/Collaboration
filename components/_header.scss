@@ -1,10 +1,14 @@
 .header{
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
     &_container{  
         position: fixed;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
         background-color: $clr-light;
         width: 100%;
         z-index: 999;
@@ -170,6 +174,10 @@
 
     @include mediaQuery($break-md) {
         &_container {
+            display: flex;
+            justify-content: center;
+            max-width: 2000px;
+            padding: 0 1rem;
             &_wrapper {
                 display: flex;
                 width: 100%;
@@ -199,7 +207,7 @@
                         position: unset;
                         max-height: none;
                         width: fit-content;
-
+                        margin-left: 50rem;
 
                         ul {
                             display: flex;
@@ -211,13 +219,6 @@
                                 display: flex;
                                 flex-direction: row;
                                 place-content: center;
-                                /* hover for window nav a{
-                                    .toggle_link{
-                                        &:hover{
-                                            
-                                        }
-                                    }
-                                }*/
                                 &:not(:nth-child(3), :last-child) {
                                     a{
                                         width: fit-content;
@@ -226,6 +227,7 @@
                                         &::after{
                                             content: "v" !important;
                                             width: fit-content;
+                                            margin-left: 0.5rem;
                                         }
                                     }
                                 }
@@ -233,15 +235,55 @@
                                 
                                 .panel{
                                     display: none;
+                                    position: absolute;
+                                    background-color: $clr-light;
+                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                    z-index: 1000; 
+                                    ul{
+                                        li{
+                                            a{
+                                                font-weight: 600;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:hover .panel{
+                                    display: block;
+                                    max-height: none;
+                                    overflow: visible;
+                                    margin: 2rem;
+                                    width: 30rem;
+                                    ul{
+                                        display: flex;
+                                        flex-direction: column;
+                                        li{
+                                            border: none;
+                                            a{
+                                                margin-left: 2rem;
+                                                transition: 0.7s ease;
+                                                &::after{
+                                                    content: none !important;
+                                                }
+                                                &:hover{
+                                                    margin-left: 3rem;
+                                                    transition: 0.7s ease;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
 
                                 width: fit-content;
                             }
-                        }
-                        
-                        &:hover{
-                            display: block;
-                        }
+                        }                  
+                    }
+
+                    .js-click, 
+                    .njs
+                    {
+                        font-weight: 600;
+                        margin-right: 2rem;
                     }
 
                     .header_button{
