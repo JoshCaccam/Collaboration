@@ -583,8 +583,19 @@
     padding-top: 3rem;
     justify-content: center;
     padding-bottom: 10rem;
-    
+    span{
+        display: block;
+        width: 30px;
+        height: 5px;
+        border-radius: 5rem;
+        background-color: black;
 
+    
+    }
+   }
+
+
+}
     span{
         display: block;
         width: 29px;
@@ -600,8 +611,6 @@
         }
         
     }
-   }
-}
 
 @include mediaQuery($break-lg){
     .Members{
@@ -897,6 +906,3 @@
             }
         }
      }
-
-
-     //Asuncion

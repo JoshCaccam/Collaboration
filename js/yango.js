@@ -5,6 +5,7 @@ const navToggles = document.querySelector(".header_toggles");
 navSpan.addEventListener("click", () => {
     navSpan.classList.toggle("open");
     navToggles.classList.toggle("open");
+
     if(navToggles.classList.contains("open")){
         navToggles.style.maxHeight = navToggles.scrollHeight + "px";
     } else {
