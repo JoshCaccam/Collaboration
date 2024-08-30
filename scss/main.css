@@ -534,6 +534,7 @@ main {
 }
 .boxes_container_wrapper .boxes_btn svg {
   margin-left: 2rem;
+  color: #000000;
 }
 .boxes_container_wrapper .boxes_btn p {
   color: #2b2b2b;
@@ -556,9 +557,8 @@ main {
     justify-content: center;
     text-align: start;
     padding: 3rem;
-    margin-left: 1rem;
     margin-left: 20rem;
-    width: 120rem;
+    width: 115rem;
     overflow-x: hidden;
   }
   .boxes_container_wrapper .boxes_img {
@@ -571,7 +571,7 @@ main {
     left: 0;
   }
   .boxes_container_wrapper .boxes_txt {
-    margin-left: 0rem;
+    margin-left: 15rem;
     text-align: start;
   }
 }

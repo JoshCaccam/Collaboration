@@ -522,6 +522,7 @@ main{
                 background: $clr-light;
                 svg{
                     margin-left: 2rem;
+                    color: $clr-black;
                 }
                 p{
                     color: $clr-dark;
@@ -546,9 +547,8 @@ main{
                 justify-content: center;
                 text-align: start;
                 padding: 3rem;
-                margin-left: 1rem;
                 margin-left: 20rem;
-                width: 120rem;
+                width: 115rem;
                 overflow-x: hidden;
                 .boxes_img{
                     position: absolute;
@@ -560,8 +560,9 @@ main{
                     }
                 }
                 .boxes_txt{
-                    margin-left: 0rem;
+                    margin-left: 15rem;
                     text-align: start;
+                    
                 }
             }
         }
