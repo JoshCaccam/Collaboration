@@ -766,20 +766,21 @@ main{
 .banner{
     &_container {
       background: linear-gradient(to right bottom, #fffefe, #fffbf6, #fcfbee, #eafeef, #d7fffe);
-        font-size: 0.8rem;
         width: 100%;
-        padding: 3rem;
+        padding: 6rem;
+        margin-top: 10rem;
         @include mediaQuery($break-md) {
-            padding: 15rem; 
+            padding: 10rem; 
             margin-bottom: 6rem;       
           }
 }
     &_text{
-        margin-right: 1rem;
+        margin-bottom: 3rem;
+        margin-left: 1rem;
         text-align: center;
         padding: 0.6rem;
         h2{
-            font-size: 1.375rem;
+            font-size: 2rem;
             font-weight: 700;
             display: block;
             @media (min-width: $break-md) {
@@ -794,14 +795,15 @@ main{
             font-size: 1rem;
             list-style: none;
             display: block;
-            margin-right: 2.5rem;
+            margin-right: 1rem;
+            margin-top: 1rem;
             @media(min-width: $break-md){
                 margin-right: 8rem;
                 margin-top: 1.7rem;
             }
             li{
                 letter-spacing: 0.4px;
-                font-size: 0.938rem;
+                font-size: 1.4rem;
                 text-align: center;
                 display: inline-block;
                 margin: 0 3px;
@@ -840,17 +842,18 @@ main{
             text-align: center;
             color: #E51938;
             font-weight: 700;
-            font-size: 0.8rem;
-            margin: 0 11rem;
+            font-size: 1rem;
+            width: 100%;
+            display: block;
             @media (min-width: $break-md){
                 font-size: 15px;
                 font-weight: 600;
                 text-align: center;
-                margin-left: 36rem;
             }
         }
         h2{
-            margin: 0 6rem;
+            font-size:2.5rem;
+            margin: 0 11rem;
             margin-top: 0.5rem;
             margin-bottom: 1.2rem;
             font-weight: 700;
@@ -860,19 +863,19 @@ main{
             }
         }
         p{
-            margin: 0 1.5rem;
+            margin: 0 2rem;
             display: block;
             color: #666666;
             line-height: 1.7;
-            font-size: 1rem;
+            font-size: 1.7rem;
             text-align: justify;
             letter-spacing: 0.1px;
             margin-bottom: 1.3rem;
             @media (min-width: $break-md){
                 text-align: center;
-                margin: 0 19rem;
+                margin: 0 43rem;
                 margin-bottom: 2rem;
-                font-size: 1rem;
+                font-size: 1.6rem;
                 letter-spacing: 0.7px;
             }
         }
@@ -885,10 +888,15 @@ main{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto auto auto auto;
         max-width: 800;
-        margin-left: 2.5rem;
-        margin-right: 25rem;
+        margin-left: 2rem;
+        margin-right: 68rem;
 
         .cblog_post_img img:hover + .cblog_post_content p + .btn-content {
+            display: block;
+            opacity: 1;
+          }
+
+        .cblog_post_img img:hover + .cblog_post_content .modify + .btn-mod {
             display: block;
             opacity: 1;
           }
@@ -896,8 +904,17 @@ main{
           .cblog_post_img img:hover + .cblog_post_content p {
             opacity: 0;
           }
+      
+          .cblog_post_img img:hover + .cblog_post_content .modify {
+            opacity: 0;
+          }
 
           .cblog_post_content:hover .btn-content {
+            display: block;
+            opacity: 1;
+          }
+
+          .cblog_post_content:hover .btn-mod {
             display: block;
             opacity: 1;
           }
@@ -912,14 +929,14 @@ main{
         &_img{
                img{
                 border-radius: 5px;
-                width: 26rem;
-                height: 17rem;
-                margin: 0 0.6rem;
+                width: 45rem;
+                height: 30rem;
+                margin: 0 2rem;
                 margin-top: 2rem;
                 cursor:pointer;
                 @media (min-width:$break-md){
-                    width: 356px;
-                    height: 273px;
+                    width: 370px;
+                    height: 280px;
                 }
                }
         }
@@ -927,7 +944,8 @@ main{
             ul{
                 list-style-type: none;
                 li{
-                    margin-left: -1.9rem;
+                    margin-top: 1rem;
+                    margin-left: 2rem;
                    span{
                     color: #E51938;
                     font-weight: bolder;
@@ -936,7 +954,7 @@ main{
                         text-decoration: none;
                         color: #E51938;
                         @media (min-width:$break-md){
-                            font-size: 1.1rem;
+                            font-size: 1.7rem;
                             font-weight: 100;
                         }
                         &:hover{
@@ -948,11 +966,11 @@ main{
             }
             h3{
                 margin-top: 1rem;
-                margin-left: 0.6rem;
-                margin-right: 3rem;
-                font-size: 1.2rem;
+                margin-left: 2rem;
+                margin-right: 1rem;
+                font-size: 2rem;
                 @media (min-width:$break-md){
-                    font-size: 22px;
+                    font-size: 20px;
                 }
                   }
 
@@ -966,9 +984,9 @@ main{
             }
             .adjustment{
                 margin-top: 1rem;
-                margin-left: -1.9rem;
-                margin-right: 3rem;
-                font-size: 1.2rem;
+                margin-left: 2rem;
+                margin-right: 1rem;
+                font-size: 2rem;
                   }
 
                 a{
@@ -980,22 +998,23 @@ main{
                 }
             }
             .modify{
-                margin-left: -1.9rem;
+                margin-left: 2rem;
             }
         }
             p{
                 color: #666666;
                 line-height: 1.7;
-                font-size: 1rem;
+                font-size: 1.5rem;
                 text-align: justify;
                 letter-spacing: 0.1px;
-                margin-top: -1rem;
-                margin-left: 0.6rem;
-                margin-right: 1rem;
+                margin-top: 0.5rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                margin-bottom: 1.5rem;
                 display: block;
                 @media (min-width:$break-md){
                     line-height: 1.8;
-                    font-size: 1.1rem;
+                    font-size: 1.7rem;
                     text-align: left;
                     transition: opacity 0.3s ease;
                 }
@@ -1004,7 +1023,8 @@ main{
             .btn-content{
                 text-decoration: none;
                 color: #2b2b2b;
-                margin-left: 0.6rem;
+                margin-left: 1.7rem;
+                margin-top: 1rem;
                 font-weight: 700;
                 @media (min-width:$break-md){
                      margin-top: -4rem;
@@ -1022,10 +1042,11 @@ main{
             .btn-mod{
                 text-decoration: none;
                 color: #2b2b2b;
-                margin-left: -1.6rem;
+                margin-left: 1.7rem;
                 font-weight: 700;
                 @media (min-width:$break-md){
                     display: none;
+                    margin-top: -4.5rem;
     }
                 
                 
