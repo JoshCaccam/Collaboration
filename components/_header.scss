@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     padding: 0 1rem;
-    &_container{  
+    &_container{          
         position: fixed;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
         background-color: $clr-light;
@@ -27,6 +27,7 @@
             flex-direction: row;
             align-items: center;
             width: 100%;
+            gap: 20rem;
             justify-content: space-evenly;
         }
         .header_links{
@@ -45,26 +46,26 @@
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
-                margin-right: 2rem;
                 cursor: pointer;
                 span{
                     display: block;
                     width: 30px;
-                    height: 3px;
+                    height: 4px;
+                    border-radius: 20px;
                     background-color: black;
                 }
                 &.open{
                     span{
                         &:first-child{
-                            transform: translate(0, 6px) rotate(135deg);
-                            width: 20px;
+                            transform: translate(0, 9px) rotate(135deg);
+                            width: 30px;
                         }
                         &:nth-child(2){
                             opacity: 0;
                         }
                         &:last-child{
-                            transform: translate(0, -10px) rotate(-135deg);
-                            width: 20px;
+                            transform: translate(0, -8px) rotate(-135deg);
+                            width: 30px;
                         }
                     }
                 }
@@ -78,7 +79,6 @@
                 transition: max-height 0.3s ease-out;
                 max-height: 0;
                 overflow: auto;
-
                 > ul{
                     display: flex;
                     flex-direction: column;
@@ -100,9 +100,11 @@
                             +.panel{
                                 max-height: 0;
                                 overflow: hidden;
+                                transition: 0.6s ease;
                                 li {
                                     padding: 1rem;
                                     border-top: 1px solid rgb(162, 158, 158);
+                                    transition: 0.6s ease;
                                     a{
                                         display: block;
                                     }
@@ -154,18 +156,23 @@
                 background-color: rgba(255, 111, 111, 0.5);
                 color: $clr-red;
                 gap: 1rem;
-                padding: 1rem;
+                padding: 0.8rem;
                 border-radius: 5px;
                 transition: 0.6s ease;
                 white-space: nowrap;
                 svg{
                     display: none;
                 }
+                p{
+                    font-size: small;
+                    font-weight: 600;
+                }
 
                 &:hover{
                     background-color: $clr-red;
                     color: $clr-light;
                     transition: 0.6s ease;
+                    cursor: pointer;
                 }
             }
         }
@@ -184,7 +191,11 @@
 
                 .header_branding{
                     width: 100%;
+                    gap: 0;
                     justify-content: space-between;
+                    .header_logo{
+                        margin-left: 3rem;
+                    }
                 }
                
                 .header_links {
@@ -192,7 +203,7 @@
                     align-items: center;
                     flex-direction: row;
                     width: 100%;
-                    margin-left: auto;
+                    margin-left: 0;
 
                     &:nth-child(2){
                         flex-direction: row;
@@ -207,7 +218,7 @@
                         position: unset;
                         max-height: none;
                         width: fit-content;
-                        margin-left: 50rem;
+                        margin-left: 48rem;
 
                         ul {
                             display: flex;
@@ -290,6 +301,7 @@
                         width: fit-content;
                         display: flex;
                         align-items: center;
+                        margin-right: 3rem;
                         svg{
                             display: unset;
                         }
