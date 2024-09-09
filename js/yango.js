@@ -55,51 +55,62 @@ function removeActiveContent() {
       creator.classList.remove('active')
    });
 }
+
+
+
  //Briones Slider
- //Slider
- document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide');
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const pagination = document.querySelector('.slider-pagination');
+  
     let currentIndex = 0;
-    const slides = document.querySelectorAll('.Members_cards1');
-    const dots = document.querySelectorAll('.owl-dot');
-    const totalSlides = slides.length;
-
-    function updateSlider(index) {
-        if (index >= totalSlides) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = totalSlides - 1;
-        } else {
-            currentIndex = index;
-        }
-
-        slides.forEach((slide, i) => {
-            slide.style.display = (i === currentIndex) ? 'block' : 'none';
-        });
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === currentIndex);
-        });
+  
+    function updateSlider() {
+      const offset = -currentIndex * 100;
+      sliderWrapper.style.transform = `translateX(${offset}%)`;
+      updatePagination();
     }
-
-    function nextSlide() {
-        updateSlider(currentIndex + 1);
+  
+    function updatePagination() {
+      pagination.querySelectorAll('button').forEach((btn, index) => {
+        btn.classList.toggle('active', index === currentIndex);
+      });
     }
-
-    function prevSlide() {
-        updateSlider(currentIndex - 1);
-    }
-
-    updateSlider(currentIndex);
-
-    document.querySelector('.owl-dot').addEventListener('click', prevSlide);
-    document.querySelector('.owl-dot').addEventListener('click', nextSlide);
-
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            updateSlider(i);
+  
+    function createPagination() {
+      slides.forEach((_, index) => {
+        const bullet = document.createElement('button');
+        bullet.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider();
         });
+        pagination.appendChild(bullet);
+      });
+       // Hide the seventh pagination bullet on desktop
+       const seventhBullet = pagination.querySelectorAll('button')[6]; // Index 6 for the 7th bullet
+       if (seventhBullet) {
+         seventhBullet.classList.add('hidden');
+       }
+      updatePagination();
+    }
+  
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+      updateSlider();
     });
-});
+  
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+      updateSlider();
+    });
+  
+    createPagination();
+    updateSlider();
+  });
+
 
 function updateDotLayout() {
 const container = document.querySelector('.Members_dots');

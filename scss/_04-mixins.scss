@@ -22,3 +22,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+
+@mixin imgFit($width, $height){
+  width: $width;
+height: $height;
+object-fit: cover;
+object-fit: center center;
+}
