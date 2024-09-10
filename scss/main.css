@@ -261,15 +261,182 @@ main {
 @media screen and (min-width: 760px) {
   .Aboutus_container {
     padding: 0;
+    border-radius: 800px 0 0 0;
   }
 }
 
+.osh_container_wrapper .osh_intro {
+  color: #E51938;
+}
+.osh_container_wrapper .osh_text_title h2 {
+  font-weight: 900;
+}
 .osh_container_wrapper .osh_text {
   text-align: center;
   padding-top: 5rem;
 }
 .osh_container_wrapper .osh_text p {
   color: 0;
+}
+@media screen and (min-width: 760px) {
+  .osh_container_wrapper .osh_text_title {
+    text-align: center;
+  }
+  .osh_container_wrapper .osh_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.trc {
+  text-align: center;
+  padding-top: 5rem;
+  background-color: rgba(27, 201, 214, 0.062);
+}
+.trc_container_wrapper {
+  margin: 5rem;
+}
+.trc_container_wrapper .trc_titles p {
+  color: #e51938;
+}
+.trc_container_wrapper .trc_cards {
+  margin-top: 2.5rem;
+  background-color: white;
+}
+.trc_container_wrapper .trc_cards p {
+  opacity: 0.7;
+}
+@media screen and (min-width: 760px) {
+  .trc_container_wrapper .trc_card_container {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.creatorH_container_wrapper {
+  text-align: center;
+  padding: 3.5rem;
+  margin-bottom: 2rem;
+  background-image: url(../img/bg2.jpg);
+}
+.creatorH_container_wrapper .creatorH_content_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-fit: center center;
+     object-fit: center center;
+}
+.creatorH_container_wrapper .creatorH_content_pfp .creatorH_title {
+  display: flex;
+  padding-top: 1.5rem;
+  justify-content: center;
+}
+.creatorH_container_wrapper .creatorH_content_pfp img {
+  width: 50px;
+  border-radius: 50%;
+}
+.creatorH_container_wrapper .creatorH_content_pfp .title_text {
+  padding-left: 1rem;
+}
+.creatorH_container_wrapper .creatorH_content_pfp .title_text h4 {
+  color: #e51938;
+}
+.creatorH_container_wrapper .creatorH_content_pfp .title_text p {
+  color: rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 760px) {
+  .creatorH_container_wrapper {
+    background-size: cover;
+    border-radius: 500px 0 0 0;
+  }
+  .creatorH_container_wrapper .creatorH_content_image img {
+    width: 450px;
+  }
+  .creatorH_container_wrapper .creatorH_content .creatorH_wrapper {
+    display: flex;
+  }
+  .creatorH_container_wrapper .creatorH_info {
+    margin-left: 2rem;
+  }
+  .creatorH_container_wrapper .creatorH_content_text {
+    margin-right: 15rem;
+    text-align: start;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    line-height: 150%;
+  }
+  .creatorH_container_wrapper .creatorH_content_pfp {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+.HomeOBG_container {
+  display: flex;
+}
+.HomeOBG_container_wrapper {
+  padding: 2rem;
+  line-height: 150%;
+}
+.HomeOBG_container_wrapper img {
+  max-width: 100%;
+}
+.HomeOBG_container_wrapper .HomeOBG_text {
+  text-align: center;
+}
+.HomeOBG_container_wrapper .HomeOBG_text p {
+  padding-top: 2rem;
+}
+.HomeOBG_container_wrapper .HomeOBG_text p:nth-child(1) {
+  color: #E51938;
+  font-weight: bold;
+  font-size: small;
+}
+.HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards img {
+  align-self: center;
+}
+.HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards .NameAndDate {
+  display: flex;
+  color: #e51938;
+  font-size: small;
+  padding-top: 2rem;
+}
+.HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards .Additionalinfo {
+  padding-top: 1.5rem;
+}
+.HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards .Additionalinfo p {
+  font-size: x-small;
+  color: rgba(0, 0, 0, 0.5);
+}
+.HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards .Additionalinfo a {
+  color: #e51938;
+}
+@media screen and (min-width: 760px) {
+  .HomeOBG_container_wrapper .HomeOBG_cards_content {
+    display: flex;
+  }
+  .HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards {
+    text-align: start;
+  }
+  .HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards h3 {
+    font-weight: 900;
+  }
+  .HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards a {
+    display: none;
+  }
+  .HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards:hover .paw {
+    display: none;
+  }
+  .HomeOBG_container_wrapper .HomeOBG_cards_content .HomeOBG_cards:hover a {
+    display: unset;
+  }
 }
 
 .about_container_wrapper {

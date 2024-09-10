@@ -236,15 +236,23 @@ main{
         }
         @include mediaQuery($break-md){
             padding: 0;
+            border-radius: 800px 0 0 0;
         }
     }
 } 
 
-.osh{
-    
+.osh{   
     &_container{
         
         &_wrapper{
+            .osh_intro{
+                color: $clr-red;
+            }
+            .osh_text_title{
+                h2{
+                    font-weight: 900;
+                }
+            }
             .osh_text{
               text-align: center;
               padding-top: 5rem;
@@ -253,6 +261,206 @@ main{
               }
                
             }
+        }
+    }
+
+    @include mediaQuery($break-md){
+        &_container{
+            &_wrapper{
+                .osh_text_title{
+                    text-align: center;
+                }
+                .osh_text{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;         
+                }
+            }
+        }
+        
+    }
+}
+
+.trc{
+    text-align: center;
+    padding-top: 5rem;
+    background-color: rgba(27, 201, 214, 0.062);
+    &_container{
+        
+        &_wrapper{
+            
+            margin: 5rem;
+            .trc_titles{
+                p{
+                    color: rgba($clr-red, 1);
+                }
+            }
+            .trc_cards{
+                margin-top: 2.5rem;
+                background-color: white;
+                
+                p{
+                    opacity: 0.7;
+                }
+                
+            }
+
+            @include mediaQuery($break-md){
+                .trc_card_container{
+                    display: flex;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+    
+}
+
+.creatorH{
+    &_container{
+        &_wrapper{
+            text-align: center;
+            padding: 3.5rem;
+            margin-bottom: 2rem;
+            background-image: url(../img/bg2.jpg);
+            .creatorH_content{
+                
+                &_image{
+                    img{
+                        @include imgFit(100%,100%)
+                    }
+                }
+                &_pfp{
+                    .creatorH_title{
+                        display: flex;
+                        padding-top: 1.5rem;
+                        justify-content: center;
+                    }
+                    img{
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+                    .title_text{
+                        padding-left: 1rem;
+                        h4{
+                            color: rgba($clr-red, 1);
+                        }
+                        p{
+                            color: rgba($clr-black, 0.25);
+                        }
+                    }
+                }
+            }
+
+            @include mediaQuery($break-md){
+                background-size: cover;
+                border-radius: 500px 0 0 0;
+                .creatorH_content{
+                    &_image{
+                        img{
+                            width: 450px;
+                        }
+                    }
+                    .creatorH_wrapper{
+                        display: flex;
+                    }
+                }
+                .creatorH_info{
+                    margin-left: 2rem;
+                }
+                .creatorH_content_text{
+                    margin-right: 15rem;
+                    text-align: start;
+                    font-family: $ff-yango;
+                    font-weight: 600;
+                    font-size: larger;
+                    line-height: 150%;
+                }
+                .creatorH_content_pfp{
+                    display: flex;
+                    justify-content: start;
+                }
+            }
+        }
+    }
+}
+
+
+.HomeOBG{
+    &_container{
+        display: flex;
+        &_wrapper{ 
+            padding: 2rem;
+            line-height: 150%;
+            img{
+                max-width: 100%;
+            }
+            .HomeOBG_text{
+                text-align: center;
+                p{
+                    padding-top: 2rem; 
+                }
+
+                p:nth-child(1){
+                    color: $clr-red;
+                    font-weight: bold;
+                    font-size: small;
+                  }
+
+                }
+                .HomeOBG_cards{
+                  &_content{
+                      .HomeOBG_cards{
+                          display: flex;
+                          flex-direction: column;
+                          padding: 1rem;
+                          img{
+                              align-self: center;
+                          }
+
+                          .NameAndDate{
+                            display: flex;
+                            color: rgba($clr-red, 1);
+                            font-size: small;
+                            padding-top: 2rem;
+                          }
+
+                          .Additionalinfo{
+                            padding-top: 1.5rem ;
+                            p{
+                                font-size: x-small;
+                                color: rgba($clr-black, 0.5);
+                            }
+                            a{
+                                color: rgba($clr-red, 1);
+                            }
+                          }
+                      }
+                  }
+                }
+
+                @include mediaQuery($break-md){
+                    .HomeOBG_cards_content{
+                        display: flex;
+                        
+                        .HomeOBG_cards{
+                            text-align: start;
+                            h3{
+                                font-weight: 900;
+                            }
+                            a{
+                                display: none;
+                            }
+                            &:hover{
+                               .paw{
+                                    display: none;
+                               } 
+                               a{
+                                display: unset;
+                               }
+                            }
+                        }
+                    }
+                }
         }
     }
 }
