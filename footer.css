@@ -1,0 +1,73 @@
+.footer_container {
+  background-color: #F9F5F2;
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+}
+.footer_container .branding {
+  margin-left: 1rem;
+}
+.footer_container .branding p {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.footer_container .branding .search-container form {
+  gap: 2rem;
+}
+.footer_container .branding .search-container input[type=text] {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.footer_container .branding .search-container button {
+  padding: 13px 20px;
+  border: none;
+  background-color: #E51938;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.footer_container .branding .search-container button:hover {
+  background-color: #2b2b2b;
+}
+.footer_social {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.footer_social i {
+  width: 1.5rem;
+  color: #666666;
+}
+.footer_social i:hover {
+  color: #E51938;
+}
+.footer_category {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.footer_category_nav ul, .footer_category_contacts ul {
+  list-style-type: none;
+  margin-left: -3rem;
+}
+.footer_category_nav ul a, .footer_category_contacts ul a {
+  text-decoration: none;
+  color: #666666;
+}
+.footer_category_nav li, .footer_category_contacts li {
+  padding: 0.5rem;
+}
+.footer_category_nav li:hover a, .footer_category_contacts li:hover a {
+  color: #E51938;
+  transition: 1s ease;
+}
+.footer_copyright p {
+  padding-top: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer_copyright p a {
+  text-decoration: none;
+}
+.footer_copyright p a:hover {
+  color: red;
+  transition: 1s ease;
+}/*# sourceMappingURL=footer.css.map */
